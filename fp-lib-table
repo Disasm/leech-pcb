@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name leech)(type KiCad)(uri ${KIPRJMOD}/leech.pretty)(options "")(descr ""))
+)

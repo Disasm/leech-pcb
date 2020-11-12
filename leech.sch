@@ -1,0 +1,570 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L FPGA_Lattice:ICE40UP5K-SG48ITR U1
+U 1 1 5F9C5A03
+P 1800 2000
+F 0 "U1" H 1750 850 50  0000 L CNN
+F 1 "ICE40UP5K-SG48ITR" H 1450 750 50  0000 L CNN
+F 2 "leech:Lattice-SG48" H 1800 650 50  0001 C CNN
+F 3 "http://www.latticesemi.com/Products/FPGAandCPLD/iCE40Ultra" H 1400 3000 50  0001 C CNN
+	1    1800 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L FPGA_Lattice:ICE40UP5K-SG48ITR U1
+U 2 1 5F9C6CCB
+P 3400 2000
+F 0 "U1" H 3400 925 50  0000 C CNN
+F 1 "ICE40UP5K-SG48ITR" H 3400 834 50  0000 C CNN
+F 2 "leech:Lattice-SG48" H 3400 650 50  0001 C CNN
+F 3 "http://www.latticesemi.com/Products/FPGAandCPLD/iCE40Ultra" H 3000 3000 50  0001 C CNN
+	2    3400 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L FPGA_Lattice:ICE40UP5K-SG48ITR U1
+U 3 1 5F9C7964
+P 4900 1600
+F 0 "U1" H 4850 950 50  0000 L CNN
+F 1 "ICE40UP5K-SG48ITR" H 4550 850 50  0000 L CNN
+F 2 "leech:Lattice-SG48" H 4900 250 50  0001 C CNN
+F 3 "http://www.latticesemi.com/Products/FPGAandCPLD/iCE40Ultra" H 4500 2600 50  0001 C CNN
+	3    4900 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L leech:ICE40UP5K-SG48ITR U1
+U 4 1 5F9C92AD
+P 1800 3700
+F 0 "U1" V 1525 3700 50  0000 C CNN
+F 1 "ICE40UP5K-SG48ITR" V 1434 3700 50  0000 C CNN
+F 2 "leech:Lattice-SG48" H 1800 2350 50  0001 C CNN
+F 3 "http://www.latticesemi.com/Products/FPGAandCPLD/iCE40Ultra" H 1400 4700 50  0001 C CNN
+	4    1800 3700
+	0    -1   -1   0   
+$EndComp
+Text Label 9400 1600 0    50   ~ 0
+GND
+Text Label 9400 1700 0    50   ~ 0
+PILL_3V3
+Text Notes 8200 3750 0    50   ~ 0
+B2 is pulled down with 10k
+$Comp
+L leech:STMPS2151STR U2
+U 1 1 5FA63350
+P 3850 5100
+F 0 "U2" H 3850 5465 50  0000 C CNN
+F 1 "STMPS2151STR" H 3850 5374 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 3850 4850 50  0001 C CNN
+F 3 "" H 3850 5100 50  0001 C CNN
+	1    3850 5100
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4200 5200
+Text Label 3350 5000 2    50   ~ 0
+PILL_3V3
+Wire Wire Line
+	3450 5000 3500 5000
+Text Label 4400 5000 0    50   ~ 0
+ICE_3V3
+Wire Wire Line
+	3500 5200 3450 5200
+Text Label 4400 5850 0    50   ~ 0
+ICE_1V2
+$Comp
+L Regulator_Linear:TPS73101DBV U3
+U 1 1 5FA6ACD3
+P 3900 5950
+F 0 "U3" H 3900 6317 50  0000 C CNN
+F 1 "TPS73101DBV" H 3900 6226 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 3900 6275 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/tps731.pdf" H 3900 5900 50  0001 C CNN
+	1    3900 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 5850 4350 5850
+Wire Wire Line
+	4350 5850 4350 5950
+Wire Wire Line
+	4350 5950 4300 5950
+$Comp
+L Device:C_Small C3
+U 1 1 5FA6C576
+P 4350 6150
+F 0 "C3" H 4442 6196 50  0000 L CNN
+F 1 "1uF" H 4442 6105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4350 6150 50  0001 C CNN
+F 3 "~" H 4350 6150 50  0001 C CNN
+	1    4350 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 5950 4350 6050
+Connection ~ 4350 5950
+Wire Wire Line
+	4350 6250 4350 6300
+Wire Wire Line
+	4350 6300 3900 6300
+Wire Wire Line
+	3900 6300 3900 6250
+Wire Wire Line
+	3900 6350 3900 6300
+Connection ~ 3900 6300
+Wire Wire Line
+	3450 5950 3500 5950
+Text Label 3450 5850 2    50   ~ 0
+PILL_3V3
+$Comp
+L Device:R_Small R2
+U 1 1 5FA7381E
+P 5100 5850
+F 0 "R2" V 4904 5850 50  0000 C CNN
+F 1 "100R" V 4995 5850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 5100 5850 50  0001 C CNN
+F 3 "~" H 5100 5850 50  0001 C CNN
+	1    5100 5850
+	0    1    1    0   
+$EndComp
+Text Label 3400 900  0    50   ~ 0
+ICE_3V3
+Text Label 4900 900  0    50   ~ 0
+ICE_3V3
+Text Label 1800 900  0    50   ~ 0
+ICE_3V3
+$Comp
+L Device:C_Small C5
+U 1 1 5FA76074
+P 5300 6000
+F 0 "C5" H 5392 6046 50  0000 L CNN
+F 1 "10uF" H 5392 5955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5300 6000 50  0001 C CNN
+F 3 "~" H 5300 6000 50  0001 C CNN
+	1    5300 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C6
+U 1 1 5FA764BB
+P 5650 6000
+F 0 "C6" H 5742 6046 50  0000 L CNN
+F 1 "0.1uF" H 5742 5955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5650 6000 50  0001 C CNN
+F 3 "~" H 5650 6000 50  0001 C CNN
+	1    5650 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 5850 5300 5850
+Wire Wire Line
+	5650 5850 5650 5900
+Wire Wire Line
+	5300 5900 5300 5850
+Connection ~ 5300 5850
+Wire Wire Line
+	5300 5850 5650 5850
+$Comp
+L power:GND #PWR05
+U 1 1 5FA77CF9
+P 5300 6200
+F 0 "#PWR05" H 5300 5950 50  0001 C CNN
+F 1 "GND" H 5305 6027 50  0000 C CNN
+F 2 "" H 5300 6200 50  0001 C CNN
+F 3 "" H 5300 6200 50  0001 C CNN
+	1    5300 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 6100 5300 6150
+Wire Wire Line
+	5300 6150 5650 6150
+Wire Wire Line
+	5650 6150 5650 6100
+Connection ~ 5300 6150
+Wire Wire Line
+	5300 6150 5300 6200
+Text Label 1400 3600 2    50   ~ 0
+ICE_VCCPLL
+Text Label 1400 3700 2    50   ~ 0
+ICE_1V2
+Wire Wire Line
+	4350 5850 4750 5850
+Connection ~ 4350 5850
+$Comp
+L Device:C_Small C4
+U 1 1 5FA7A759
+P 5300 5150
+F 0 "C4" H 5392 5196 50  0000 L CNN
+F 1 "1uF" H 5392 5105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5300 5150 50  0001 C CNN
+F 3 "~" H 5300 5150 50  0001 C CNN
+	1    5300 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 5000 5300 5050
+$Comp
+L power:GND #PWR04
+U 1 1 5FA7D1CB
+P 5300 5250
+F 0 "#PWR04" H 5300 5000 50  0001 C CNN
+F 1 "GND" H 5305 5077 50  0000 C CNN
+F 2 "" H 5300 5250 50  0001 C CNN
+F 3 "" H 5300 5250 50  0001 C CNN
+	1    5300 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5FA81424
+P 2200 3700
+F 0 "#PWR01" H 2200 3450 50  0001 C CNN
+F 1 "GND" H 2205 3527 50  0000 C CNN
+F 2 "" H 2200 3700 50  0001 C CNN
+F 3 "" H 2200 3700 50  0001 C CNN
+	1    2200 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP2
+U 1 1 5FA65981
+P 4750 5000
+F 0 "TP2" H 4750 5233 50  0000 C CNN
+F 1 "3V3" H 4750 5324 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 4950 5000 50  0001 C CNN
+F 3 "~" H 4950 5000 50  0001 C CNN
+	1    4750 5000
+	-1   0    0    1   
+$EndComp
+Connection ~ 4750 5000
+$Comp
+L Connector:TestPoint TP3
+U 1 1 5FA67A13
+P 4750 5850
+F 0 "TP3" H 4750 6083 50  0000 C CNN
+F 1 "1V2" H 4750 6174 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 4950 5850 50  0001 C CNN
+F 3 "~" H 4950 5850 50  0001 C CNN
+	1    4750 5850
+	-1   0    0    1   
+$EndComp
+Connection ~ 4750 5850
+Wire Wire Line
+	4750 5850 5000 5850
+NoConn ~ 9400 3400
+NoConn ~ 9400 3100
+NoConn ~ 9400 3200
+NoConn ~ 9400 3300
+NoConn ~ 8000 3400
+NoConn ~ 8000 3200
+Text Label 2900 2600 2    50   ~ 0
+ICE_SO
+Text Label 2900 2700 2    50   ~ 0
+ICE_SI
+Text Label 2900 2800 2    50   ~ 0
+ICE_SCK
+Text Label 2900 2900 2    50   ~ 0
+ICE_SS
+Text Label 8000 1700 2    50   ~ 0
+ICE_SO
+Text Label 8000 1800 2    50   ~ 0
+ICE_SI
+Text Label 8000 1600 2    50   ~ 0
+ICE_SCK
+Text Label 8000 1500 2    50   ~ 0
+ICE_SS
+Text Label 2900 1300 2    50   ~ 0
+CRESET
+Text Label 9400 1900 0    50   ~ 0
+CRESET
+Text Notes 9650 2900 0    50   ~ 0
+Button
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5FAA64FF
+P 3450 4900
+F 0 "TP1" H 3450 5225 50  0000 C CNN
+F 1 "P3V3" H 3450 5134 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 3650 4900 50  0001 C CNN
+F 3 "~" H 3650 4900 50  0001 C CNN
+	1    3450 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 4900 3450 5000
+Text Label 8000 2600 2    50   ~ 0
+IO2
+Text Label 8000 2500 2    50   ~ 0
+IO3
+Text Label 8000 2400 2    50   ~ 0
+IO6
+Text Label 8000 2300 2    50   ~ 0
+IO10
+Text Label 8000 2200 2    50   ~ 0
+IO11
+Text Label 8000 2100 2    50   ~ 0
+IO12
+Text Label 8000 2000 2    50   ~ 0
+IO13
+Text Label 2900 1600 2    50   ~ 0
+IO6
+Text Label 2900 1800 2    50   ~ 0
+IO10
+Text Label 2900 1900 2    50   ~ 0
+IO11
+Text Label 2900 2000 2    50   ~ 0
+IO12
+Text Label 2900 2200 2    50   ~ 0
+IO13
+Text Label 2900 2500 2    50   ~ 0
+IO18
+Text Label 4500 1800 2    50   ~ 0
+IO45
+Text Label 4500 1400 2    50   ~ 0
+IO46
+Text Label 4500 1500 2    50   ~ 0
+IO47
+Text Label 4500 1700 2    50   ~ 0
+IO48
+Text Label 4500 1600 2    50   ~ 0
+IO44
+Text Label 1400 1400 2    50   ~ 0
+IO25
+Text Label 1400 1600 2    50   ~ 0
+IO27
+Text Label 1400 1700 2    50   ~ 0
+IO26
+Text Label 1400 1800 2    50   ~ 0
+IO28
+Text Label 1400 2100 2    50   ~ 0
+IO34
+Text Label 1400 2200 2    50   ~ 0
+IO37
+Text Label 1400 2400 2    50   ~ 0
+IO36
+Text Label 1400 2500 2    50   ~ 0
+IO43
+Text Label 1400 2600 2    50   ~ 0
+IO38
+Text Label 1400 2700 2    50   ~ 0
+IO42
+Text Label 5400 5850 0    50   ~ 0
+ICE_VCCPLL
+$Comp
+L power:GND #PWR03
+U 1 1 5FA68248
+P 3900 6350
+F 0 "#PWR03" H 3900 6100 50  0001 C CNN
+F 1 "GND" H 3905 6177 50  0000 C CNN
+F 2 "" H 3900 6350 50  0001 C CNN
+F 3 "" H 3900 6350 50  0001 C CNN
+	1    3900 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 5850 3450 5850
+Wire Wire Line
+	3450 5850 3450 5950
+Connection ~ 3450 5950
+Wire Wire Line
+	3450 5950 3450 6050
+Wire Wire Line
+	3450 6300 3900 6300
+Wire Wire Line
+	3450 6250 3450 6300
+$Comp
+L Device:C_Small C2
+U 1 1 5FA7F6F0
+P 3450 6150
+F 0 "C2" H 3358 6196 50  0000 R CNN
+F 1 "1uF" H 3358 6105 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3450 6150 50  0001 C CNN
+F 3 "~" H 3450 6150 50  0001 C CNN
+	1    3450 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 5FACA259
+P 3150 5400
+F 0 "C1" H 3242 5354 50  0000 L CNN
+F 1 "1uF" H 3242 5445 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3150 5400 50  0001 C CNN
+F 3 "~" H 3150 5400 50  0001 C CNN
+	1    3150 5400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R1
+U 1 1 5FACFCAE
+P 3150 5100
+F 0 "R1" H 3091 5146 50  0000 R CNN
+F 1 "10k" H 3091 5055 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 3150 5100 50  0001 C CNN
+F 3 "~" H 3150 5100 50  0001 C CNN
+	1    3150 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 5200 3150 5250
+Wire Wire Line
+	3450 5000 3150 5000
+Connection ~ 3450 5000
+Wire Wire Line
+	3150 5250 3350 5250
+Wire Wire Line
+	3350 5250 3350 5100
+Wire Wire Line
+	3350 5100 3500 5100
+Connection ~ 3150 5250
+Wire Wire Line
+	3150 5250 3150 5300
+Wire Wire Line
+	3450 5200 3450 5350
+$Comp
+L power:GND #PWR02
+U 1 1 5FA66133
+P 3450 5400
+F 0 "#PWR02" H 3450 5150 50  0001 C CNN
+F 1 "GND" H 3455 5227 50  0000 C CNN
+F 2 "" H 3450 5400 50  0001 C CNN
+F 3 "" H 3450 5400 50  0001 C CNN
+	1    3450 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 5550 3350 5350
+Wire Wire Line
+	3350 5350 3450 5350
+Connection ~ 3450 5350
+Wire Wire Line
+	3450 5350 3450 5400
+Wire Wire Line
+	3150 5500 3150 5550
+Wire Wire Line
+	3150 5550 3350 5550
+$Comp
+L leech:WeActBoard_noswd CN1
+U 1 1 5FBA047E
+P 8700 2600
+F 0 "CN1" H 8700 3965 50  0000 C CNN
+F 1 "WeActBoard_noswd" H 8700 3874 50  0000 C CNN
+F 2 "leech:WeAct_v3.0_cut" H 8700 2600 50  0001 C CNN
+F 3 "" H 8700 2600 50  0001 C CNN
+	1    8700 2600
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3900 1300
+Text Label 8000 1900 2    50   ~ 0
+CLK
+Text Notes 7700 1900 2    50   ~ 0
+MCO
+Text Label 2900 2300 2    50   ~ 0
+CLK
+Text Label 8000 2700 2    50   ~ 0
+IO48
+Text Label 8000 2800 2    50   ~ 0
+IO47
+Text Label 8000 2900 2    50   ~ 0
+IO46
+Text Label 1400 2300 2    50   ~ 0
+IO35
+Text Label 9400 2800 0    50   ~ 0
+IO38
+Text Label 9400 2700 0    50   ~ 0
+IO37
+Text Label 9400 2600 0    50   ~ 0
+IO36
+Text Label 9400 2500 0    50   ~ 0
+IO35
+Text Label 9400 2400 0    50   ~ 0
+IO34
+Text Label 9400 2300 0    50   ~ 0
+IO28
+Text Label 9400 2200 0    50   ~ 0
+IO27
+Text Label 9400 2100 0    50   ~ 0
+IO26
+Text Label 9400 2000 0    50   ~ 0
+IO25
+Text Label 9400 1800 0    50   ~ 0
+IO18
+Wire Wire Line
+	4750 5000 5300 5000
+Text Label 1400 3800 2    50   ~ 0
+ICE_3V3
+Text Label 9400 2900 0    50   ~ 0
+IO42
+Text Label 9400 3000 0    50   ~ 0
+IO43
+Text Label 8000 3000 2    50   ~ 0
+IO45
+Text Label 8000 3100 2    50   ~ 0
+IO44
+NoConn ~ 1400 2800
+NoConn ~ 1400 2900
+NoConn ~ 1400 3000
+Text Notes 2200 5300 0    50   ~ 0
+This sets delay of\napproximately 5ms
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5FAE4D56
+P 9600 1500
+F 0 "#FLG0102" H 9600 1575 50  0001 C CNN
+F 1 "PWR_FLAG" H 9600 1673 50  0000 C CNN
+F 2 "" H 9600 1500 50  0001 C CNN
+F 3 "~" H 9600 1500 50  0001 C CNN
+	1    9600 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9600 1500 9600 1600
+Wire Wire Line
+	9600 1600 9400 1600
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 5FAE65C5
+P 10000 1500
+F 0 "#FLG0103" H 10000 1575 50  0001 C CNN
+F 1 "PWR_FLAG" H 10000 1673 50  0000 C CNN
+F 2 "" H 10000 1500 50  0001 C CNN
+F 3 "~" H 10000 1500 50  0001 C CNN
+	1    10000 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 1500 10000 1700
+Wire Wire Line
+	10000 1700 9400 1700
+NoConn ~ 9400 1500
+Wire Wire Line
+	4200 5000 4750 5000
+NoConn ~ 1400 1500
+NoConn ~ 2900 2100
+NoConn ~ 2900 1700
+Text Label 4500 1900 2    50   ~ 0
+IO2
+Text Label 4500 2100 2    50   ~ 0
+IO3
+NoConn ~ 4500 2000
+NoConn ~ 1400 1900
+NoConn ~ 1400 2000
+NoConn ~ 2900 2400
+NoConn ~ 8000 3300
+Text Notes 4250 4650 0    50   ~ 0
+Rising times:\nPILL_3V3: 60us\nICE_1V2: 75 us\nICE_3V3: 1ms (after 5ms delay)
+$EndSCHEMATC
