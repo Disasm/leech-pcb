@@ -12,6 +12,8 @@ This schematic and PCB design are licensed under the
 Creative Commons [CC0 public domain dedication].
 It is provided with no warranty.
 
+Firmware and gateware: https://github.com/Disasm/leech-fw
+
 [icepill]: https://github.com/adamgreig/icepill
 [Adam Greig]: https://github.com/adamgreig
 [CC0 public domain dedication]: https://creativecommons.org/publicdomain/zero/1.0/
